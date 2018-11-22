@@ -3,9 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 .requerido {
     color: #ff0a0a;
     font-size: 1em;
+}
+ul {
+    list-style-type: none;
 }
