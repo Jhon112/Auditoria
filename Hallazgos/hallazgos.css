@@ -1,12 +1,26 @@
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+div.page-header {
+    margin: 2em 0;
+}
+div.botones {
+    padding-top: 1.5em;
+}
+label {
+    font-weight: 700;
+}
+/* TABLE */
+
+ul {
+    list-style-type: none;
+}
+
+/* FORM */
 .requerido {
     color: #ff0a0a;
     font-size: 1em;
-}
-ul {
-    list-style-type: none;
 }
