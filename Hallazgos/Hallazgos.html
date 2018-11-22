@@ -9,50 +9,69 @@
     <link rel="stylesheet" type="text/css" media="screen" href="hallazgos.css" />
 </head>
 <body>
-    <h1>Hallazgos</h1>
-    <div id="main-dropdowns">
-        <select name="planAuditoria" id="planAuditoria">
-            <option value="">Plan Auditoria</option>
-        </select>
-        <select name="agenda" id="agenda">
-            <option value="">Agenda</option>
-        </select>
+    <div class="container-fluid">
+    <div class="page-header">
+        <h2>Acción de Mejora</h1>
     </div>
-    <div id="main-buttons">
-        <button id="buscarHallazgos">BUSCAR</button>
-        <button id="agregarHallazgos">AGREGAR</button>
+    <div class="row main-fields">
+        <div class="col-md-6 ">
+            <label for="planAuditoria">Plan Auditoria<span class="requerido">*</span></label>
+            <select name="planAuditoria" id="planAuditoria" class="form-control">
+                <option value="0">Seleccione...</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="agendaPlan">Agenda<span class="requerido">*</span></label>
+            <select class="agendaPlan form-control">
+                <option selected="selected" value="0">Seleccione...</option>
+            </select>
+        </div>
+    </div>
+    <div class="botones row justify-content-around">
+        <div class="col-md-3">
+            <button class="buscar btn btn-primary form-control">Buscar</button>
+        </div>
+        <div class="col-md-3">
+            <button class="abrirFormulario btn btn-primary form-control">Nueva acción de mejora</button>
+        </div>
     </div>
     <hr>
     <section id="tablaHallazgos">
-            <table id="hallazgos">
-                <thead>
-                    <th>Titulo</th>
-                    <th>Fecha del Hallazgo</th>
-                    <th>
-                        <ul>
-                            <li>Fuente</li>
-                            <li>Causa</li>
-                            <li>Requisito Normativo</li>
-                        </ul>
-                    </th>
-                    <th>Tipo de Hallazgo</th>
-                    <th id="auditoriaProceso">
-                        <ul>
-                            <li>Proceso - SubProceso</li>
-                            <li>Empresa</li>
-                            <li>Gerencia</li>
-                            <li>Departamento</li>                    
-                        </ul>
-                    </th>
-                    <th>Descripción Hallazgo</th>
-                    <th>Tipo Solución</th>
-                    <th>Descripción Solución</th>
-                    <th>Responsable Hallazgo</th>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="hallazgos" class="table table-bordered table-striped">
+                        <thead>
+                            <th>Titulo</th>
+                            <th>Fecha del Hallazgo</th>
+                            <th>
+                                <ul>
+                                    <li>Fuente</li>
+                                    <li>Causa</li>
+                                    <li>Requisito Normativo</li>
+                                </ul>
+                            </th>
+                            <th>Tipo de Hallazgo</th>
+                            <th id="auditoriaProceso">
+                                <ul>
+                                    <li>Proceso - SubProceso</li>
+                                    <li>Empresa</li>
+                                    <li>Gerencia</li>
+                                    <li>Departamento</li>                    
+                                </ul>
+                            </th>
+                            <th>Descripción Hallazgo</th>
+                            <th>Tipo Solución</th>
+                            <th>Descripción Solución</th>
+                            <th>Responsable Hallazgo</th>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="formularioAgregar">
         <form>
@@ -63,7 +82,7 @@
             <div>
                 <label for="fechaHallazgo">Fecha Hallazgo<span class="requerido">*</span></label>
                 <div class="input-group date datepicker" id="fechaHallazgo" data-provide="datepicker">
-                    <input type="text" class="input-sm" id="dfechaHallazgos">
+                    <input type="text" class="form-control input-sm" id="dfechaHallazgos">
                     <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th"></span>
                     </div>
@@ -140,6 +159,7 @@
             </div>            
         </form>
     </section>
+</div>
 
 
 
