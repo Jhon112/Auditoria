@@ -13,17 +13,30 @@ div.botones {
 label {
     font-weight: 700;
 }
-/* TABLE */
+.btn-primary {
+    border-radius: 1em;
+}
 
+/* TABLE */
+section.tabla-hallazgos {
+    /* display: none; */
+}
 th {
     vertical-align: top !important;
 }
-
 ul {
     list-style-type: none;
 }
 
+
 /* FORM */
+section.formulario-agregar {
+    /* display: none; */
+}
+section>h3 {
+    text-align: center;
+    margin: 1em;
+}
 .requerido {
     color: #ff0a0a;
     font-size: 1em;
