@@ -52,7 +52,7 @@
                                 </ul>
                             </th>
                             <th>Tipo de Hallazgo</th>
-                            <th id="auditoriaProceso">
+                            <th class="auditoriaProceso">
                                 <ul>
                                     <li>Proceso</li>
                                     <li>SubProceso</li>
@@ -76,88 +76,131 @@
     </section>
     <section id="formularioAgregar">
         <form>
-            <div>
-                <label for="titulo">Titulo<span class="requerido">*</span></label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="fechaHallazgo">Fecha Hallazgo<span class="requerido">*</span></label>
-                <div class="input-group date datepicker" id="fechaHallazgo" data-provide="datepicker">
-                    <input type="text" class="form-control input-sm" id="dfechaHallazgos">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-th"></span>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="fechaHallazgo">Fecha Hallazgo<span class="requerido">*</span></label>
+                    <div class="input-group date datepicker" id="fechaHallazgo" data-provide="datepicker">
+                        <input type="text" name="dfechaHallazgos" class="form-control input-sm" id="dfechaHallazgos">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <label for="fuenteHallazgo">Fuente Hallazgo<span class="requerido">*</span></label>
-                <input type="text">
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="titulo">Titulo<span class="requerido">*</span></label>
+                    <input type="text" name="titulo" id="titulo" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="tipoHallazgo">Tipo Hallazgo<span class="requerido">*</span></label>
+                    <select name="tipoHallazgo" id="tipoHallazgo" class="form-control">
+                        <option value="No conformidad menor">No conformidad menor</option>
+                        <option value="No conformidad mayor">No conformidad mayor</option>
+                        <option value="Observación">Observación</option>
+                        <option value="Observación menor">Observación menor</option>
+                        <option value="Acción de Mejora">Acción de Mejora</option>
+                        <option value="Riesgo">Riesgo</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <label for="requisitoNorma">Requisito Norma<span class="requerido">*</span></label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="tipoHallazgo">Tipo Hallazgo<span class="requerido">*</span></label>
-                <select name="tipoHallazgo" id="tipoHallazgo">
-                    <option value="No conformidad menor">No conformidad menor</option>
-                    <option value="No conformidad mayor">No conformidad mayor</option>
-                    <option value="Observación">Observación</option>
-                    <option value="Observación menor">Observación menor</option>
-                    <option value="Acción de Mejora">Acción de Mejora</option>
-                    <option value="Riesgo">Riesgo</option>
-                </select>
-            </div>
-            <div>
-                <label for="proceso">Proceso<span class="requerido">*</span></label>
-                <select name="" id=""></select>
-            </div>
-            <div>
-                <label for="subproceso">Subproceso<span class="requerido">*</span></label>
-                <select name="" id=""></select>
-            </div>
-            <div>
-                <label for="empresa">Empresa<span class="requerido">*</span></label>
-                <select name="" id=""></select>
-            </div>
-            <div>
-                <label for="gerencia">Gerencia<span class="requerido">*</span></label>
-                <select name="" id=""></select>
-            </div>
-            <div>
-                <label for="departamento">Departamento<span class="requerido">*</span></label>
-                <select name="" id=""></select>
-            </div>
-            <div>
-                <label for="descripcionHallazgo">Descripción del Hallazgo<span class="requerido">*</span></label>
-                <textarea name="descripcionHallazgo" id="descripcionHallazgo" rows="3"></textarea>
-            </div>
-            <div>
-                <label for="causaHallazgo">Causa del Hallazgo<span class="requerido">*</span></label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="requiereEvaluacion">Requiere Evaluacion<span class="requerido">*</span></label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="tipoSolucion">Tipo Solucion<span class="requerido">*</span></label>
-                <select name="tipoSolucion" id="tipoSolucion">
-                    <option value="Acción Correctiva">Acción Correctiva</option>
-                    <option value="Acción Preventiva">Acción Preventiva</option>
-                    <option value="Corrección Rápida (“QuickWins”)">Corrección Rápida (“QuickWins”)</option>
-                    <option value="Oportunidad">Oportunidad</option>
-                    <option value="Plan de Acción">Plan de Acción</option>
-                </select>
-            </div>
-            <div>
-                <label for="descripcionSolucion">Descripción Solucion<span class="requerido">*</span></label>
-                <textarea name="descripcionSolucion" id="descripcionSolucion" rows="3"></textarea>
-            </div>
-            <div>
-                <label for="responsableHallazgo">Responsable Hallazgo<span class="requerido">*</span></label>
-                <input type="text">
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="fuenteHallazgo">Fuente Hallazgo<span class="requerido">*</span></label>
+                    <textarea name="fuenteHallazgo" id="fuenteHallazgo" rows="3" class="form-control">
+
+                    </textarea>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="requisitoNorma">Requisito Norma<span class="requerido">*</span></label>
+                    <textarea name="requisitoNorma" id="requisitoNorma" rows="3" class="form-control">
+
+                    </textarea>
+                </div>
             </div>            
+            <div class="auditoria-proceso">
+                <div class="form-row">
+                    <div class="col-md-4 form-group">
+                        <label for="empresa">Empresa<span class="requerido">*</span></label>
+                        <select name="empresa" id="empresa" class="form-control">
+
+                        </select>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="gerencia">Gerencia<span class="requerido">*</span></label>
+                        <select name="gerencia" id="gerencia" class="form-control">
+
+                        </select>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="departamento">Departamento<span class="requerido">*</span></label>
+                        <select name="departamento" id="departamento" class="form-control">
+                                
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="proceso">Proceso<span class="requerido">*</span></label>
+                    <select name="proceso" id="proceso" class="form-control">
+                    
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="subproceso">Subproceso<span class="requerido">*</span></label>
+                    <select name="subproceso" id="subproceso" class="form-control">
+                    
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="descripcionHallazgo">Descripción del Hallazgo<span class="requerido">*</span></label>
+                    <textarea name="descripcionHallazgo" id="descripcionHallazgo" rows="3" class="form-control">
+                    
+                    </textarea>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="causaHallazgo">Causa del Hallazgo<span class="requerido">*</span></label>
+                    <textarea name="causaHallazgo" id="causaHallazgo" rows="3" class="form-control">
+
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="requiereEvaluacion">Requiere Evaluacion<span class="requerido">*</span></label>
+                    <select name="subproceso" id="subproceso" class="form-control">
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="tipoSolucion">Tipo Solucion<span class="requerido">*</span></label>
+                    <select name="tipoSolucion" id="tipoSolucion" class="form-control">
+                        <option value="Acción Correctiva">Acción Correctiva</option>
+                        <option value="Acción Preventiva">Acción Preventiva</option>
+                        <option value="Corrección Rápida (“QuickWins”)">Corrección Rápida (“QuickWins”)</option>
+                        <option value="Oportunidad">Oportunidad</option>
+                        <option value="Plan de Acción">Plan de Acción</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-12 form-group">
+                    <label for="descripcionSolucion">Descripción Solucion<span class="requerido">*</span></label>
+                    <textarea name="descripcionSolucion" id="descripcionSolucion" rows="3" class="form-control">
+
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="responsableHallazgo">Responsable Hallazgo<span class="requerido">*</span></label>
+                    <input type="text" name="responsableHallazgo" id="responsableHallazgo" class="form-control">
+                </div>
+            </div>        
         </form>
     </section>
 </div>

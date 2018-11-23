@@ -1,0 +1,6 @@
+{
+    "css.lint.boxModel": "warning",
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.emptyRules": "ignore",
+    "html-css-class-completion.enableEmmetSupport": true
+}
