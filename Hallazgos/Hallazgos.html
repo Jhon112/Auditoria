@@ -11,7 +11,7 @@
 <body>
     <div class="container-fluid">
     <div class="page-header">
-        <h2>Acción de Mejora</h1>
+        <h1>Hallazgo</h1>
     </div>
     <div class="row main-fields">
         <div class="col-md-6 ">
@@ -36,13 +36,14 @@
         </div>
     </div>
     <hr>
-    <section id="tablaHallazgos">
+<section id="tablaHallazgos" class="tabla-hallazgos">
+        <h3>Hallazgos</h3>
         <div class="row">
             <div class="col-12">
                 <div class="table-responsive">
                     <table id="hallazgos" class="table table-bordered table-striped">
                         <thead>
-                            <th>Titulo</th>
+                            <th>Título</th>
                             <th>Fecha del Hallazgo</th>
                             <th>
                                 <ul>
@@ -74,7 +75,8 @@
             </div>
         </div>
     </section>
-    <section id="formularioAgregar">
+    <section id="formularioAgregar" class="formulario-agregar">
+        <h3>Informacion Hallazgo</h3>
         <form>
             <div class="form-row">
                 <div class="col-md-6 form-group">
@@ -89,7 +91,7 @@
             </div>
             <div class="form-row">
                 <div class="col-md-6 form-group">
-                    <label for="titulo">Titulo<span class="requerido">*</span></label>
+                    <label for="titulo">Título<span class="requerido">*</span></label>
                     <input type="text" name="titulo" id="titulo" class="form-control">
                 </div>
                 <div class="col-md-6 form-group">
@@ -200,7 +202,12 @@
                     <label for="responsableHallazgo">Responsable Hallazgo<span class="requerido">*</span></label>
                     <input type="text" name="responsableHallazgo" id="responsableHallazgo" class="form-control">
                 </div>
-            </div>        
+            </div>
+            <div class="form-row">
+                <div class="col-md-2 form-group">
+                    <button id="agregarHallazgo" class="btn-primary form-control">Agregar</button>        
+                </div>
+            </div>
         </form>
     </section>
 </div>
